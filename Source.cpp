@@ -37,7 +37,7 @@ int main() {
 	/*
 		Read example :D
 
-		std::ifstream is("BIGLAS.txt", std::ios::binary | std::ios::ate);
+		std::ifstream is("BIGLAS.lasbin", std::ios::binary | std::ios::ate);
 		auto size = is.tellg();
 		std::vector<glm::vec3> lasDataPoints(size / sizeof(glm::vec3));
 		is.seekg(0);
