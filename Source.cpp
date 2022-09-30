@@ -42,6 +42,6 @@ int main() {
 		auto size = is.tellg();
 		std::vector<glm::vec3> lasDataPoints(size / sizeof(glm::vec3));
 		is.seekg(0);
-		is.read(lasDataPoints.data(), size))
+		is.read(reinterpret_cast<char *>lasDataPoints.data(), size))
 	*/
 }
