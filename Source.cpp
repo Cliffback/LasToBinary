@@ -11,7 +11,8 @@ struct Vertex {
 };
 
 int main() {
-	std::ifstream inn("france.txt");
+	std::string filename{ "france" }; 	// Insert filename here
+	std::ifstream inn(filename + ".txt");
 	if (!inn.is_open()) {
 		std::cout << "Cant open file!" << std::endl;
 		return 0;
@@ -30,7 +31,7 @@ int main() {
 
 	inn.close();
 
-	std::ofstream out("france.lasbin", std::ios::binary);
+	std::ofstream out(filename + ".lasbin", std::ios::binary);
 	out.write((const char*)lasData.data(), lasData.size() * sizeof(Vertex));
 	std::cout << "Wrote las text file to binary" << std::endl;
 
